@@ -1,0 +1,19 @@
+{
+  "name": "web-cinema",
+  "version": "1.0.0",
+  "description": "First web design by myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhTuspham/web-cinema.git"
+  },
+  "author": "Anh-Tu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhTuspham/web-cinema/issues"
+  },
+  "homepage": "https://github.com/anhTuspham/web-cinema#readme"
+}
