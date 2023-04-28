@@ -2,11 +2,10 @@
   "name": "web-cinema",
   "version": "1.0.0",
   "description": "First web design by myself",
-  "main": "index.js",
+  "main": "home.js",
   "scripts": {
-    "start": "parcel home.html --port 2690",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "start": "parcel index.html --port 2690",
+    "build": "parcel build home.js --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,10 @@
   },
   "homepage": "https://github.com/anhTuspham/web-cinema#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "open": "^9.1.0"
   }
 }
