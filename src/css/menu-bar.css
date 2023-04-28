@@ -1,0 +1,8 @@
+ul{
+    list-style-type: none;
+}
+
+.left-column ul li a svg{
+    width: 20px;
+    height: 20px;
+}
