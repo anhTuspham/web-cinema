@@ -1,3 +1,23 @@
 @import "header.css";
 @import "account.css";
 @import "menu-bar.css";
+@import "feature.css";
+@import "movie-single.css";
+body{
+    background: rgba(190, 213, 210, 0.46);
+}
+.container{
+    background: white;
+    margin: 100px 200px;
+    padding: 25px 59px;
+    border-radius: 30px;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+p{
+    margin: 5px
+}
