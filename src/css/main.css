@@ -4,6 +4,7 @@
 @import "feature.css";
 @import "movie-single.css";
 @import "content.css";
+@import "setting-logout.css";
 body{
     font-family: 'Sora', sans-serif;
 }

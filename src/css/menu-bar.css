@@ -1,8 +1,37 @@
 ul{
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    gap: 10px;
+}
+li a{
+    text-decoration: none;
+    color: #000000;
 }
 
-.left-column ul li a svg{
-    width: 20px;
-    height: 20px;
+.menu-bar{
+    padding: 5px 0;
+}
+li a h4{
+    font-weight: 800;
+}
+
+.title-menu{
+    background-color: #87CEFA;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 25px;
+    border-left: solid 4px #0c87fa;
+    border-radius: 10px;
+}
+
+.num-notify{
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 4px 15px;
+    background-color: #F5FFFA;
+    border-radius: 20px;
 }
