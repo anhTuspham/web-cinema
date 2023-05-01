@@ -3,6 +3,10 @@
 @import "menu-bar.css";
 @import "feature.css";
 @import "movie-single.css";
+@import "content.css";
+body{
+    font-family: 'Sora', sans-serif;
+}
 body{
     background: rgba(190, 213, 210, 0.46);
 }
@@ -21,3 +25,4 @@ svg{
 p{
     margin: 5px
 }
+

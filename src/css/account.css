@@ -1,0 +1,74 @@
+.account{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 15px 15px;
+    background-image: linear-gradient(to bottom right, #72b9f8, #0c87fa);
+}
+.profile-account{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #96add3;
+}
+.profile-account img{
+    border-radius: 50%;
+    height: 70px;
+    aspect-ratio: 1/1;
+}
+.info-profile-account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.account h4{
+    color: #ffffff;
+    margin: 5px;
+    font-weight: 700;
+}
+.account h5{
+    color: #e5d9d9;
+    margin: 5px;
+}
+.phone-profile-account h4{
+    color: #eee6e6;
+}
+.balance-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.balance-account .money{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wallet-symbol{
+    display: flex;
+    padding: 5px;
+    background-color: #6bb7fa;
+    border: solid 1px #72B9F8;
+    border-radius: 30px;
+}
+
+.wallet-symbol svg{
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.money-balance {
+    margin: 0 5px
+}
+
+.add-acc-btn{
+    cursor: pointer;
+    background-color: white;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 40px;
+}

@@ -4,15 +4,31 @@
     justify-content: space-between;
     /*flex-basis: 30%;*/
     align-items: center;
+    overflow: hidden;
 }
-.login-btn{
-    margin-right: auto;
+.logo-part{
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
+
+/*.logo-part img{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*    vertical-align: middle;*/
+/*}*/
 .header-part{
+    flex: 4;
     margin: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     gap: 12px;
+}
+
+.login-btn{
+    margin-right: auto;
 }
 
 .header-btn{
