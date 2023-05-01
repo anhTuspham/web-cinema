@@ -1,0 +1,11 @@
+.content-container{
+    display: flex;
+}
+
+.left-column-container{
+    flex: 1;
+    padding: 5px 10px;
+}
+.right-column-container{
+    flex: 4;
+}
