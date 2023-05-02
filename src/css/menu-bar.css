@@ -13,7 +13,8 @@ ul{
 
 
 .title-menu{
-    background-color: #87CEFA;
+    /*background-color: #87CEFA;*/
+    background: var(--menu-color);
     display: flex;
     align-items: center;
     gap: 20px;

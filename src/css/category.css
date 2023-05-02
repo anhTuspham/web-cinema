@@ -1,0 +1,50 @@
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*align-items: center;*/
+}
+.category h3{
+    margin: .1rem 0 .3rem 0
+}
+.option-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.option-container.active{
+    max-height: 14rem;
+    overflow-y: scroll;
+    /*opacity: 1;*/
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    border-radius: .8rem;
+    background: var(--background-category-color);
+    cursor: pointer;
+    transition: ease 0.4s;
+}
+.option:hover{
+    background: var(--background-main-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+.option.selected{
+    background: var(--background-main-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+
+}
+.select-box .option-container::-webkit-scrollbar{
+    display: none;
+}
+.select-box .option label{
+    cursor: pointer;
+    color: white;
+}
+.select-box .option input{
+    display: none;
+}

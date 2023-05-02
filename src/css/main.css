@@ -5,22 +5,29 @@
 @import "movie-single.css";
 @import "content.css";
 @import "setting-logout.css";
+@import "category.css";
 
 :root{
     --background-main-color: linear-gradient(to bottom right, #72b9f8, #0c87fa);
-    --background-feature-color: rgba(172, 166, 169, 0.36);
+    --background-feature-color: rgba(172, 166, 169, 0.85);
+    --background-category-color: linear-gradient(to bottom right, rgba(9,50,59,1) 0%, rgba(37,38,61,1) 0%, rgba(6,18,62,1) 100%);
+    /*--main-color: linear-gradient(128deg, rgba(18,40,65,1) 0%, rgba(9,50,59,1) 0%, rgba(7,33,57,1) 84%, rgba(1,27,64,1) 100%);*/
+    --main-color: #21212d;
+    --menu-color: rgb(15, 25, 87);
 }
 body{
     font-family: 'Sora', sans-serif;
     background: rgba(190, 213, 210, 0.46);
     font-size: 16px;
+    color: white;
 }
 
 .container{
     background: white;
     margin: 100px 200px;
-    padding: 25px 59px;
+    padding: 25px 30px 25px 40px;
     border-radius: 30px;
+    background: var(--main-color);
 }
 
 ul{
@@ -35,7 +42,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: #000000;
+    color: white;
     font-weight: 400;
 }
 
@@ -43,6 +50,7 @@ h4,h5{
     font-weight: 500;
 }
 svg{
+    color: white;
     width: 20px;
     height: 20px;
 }

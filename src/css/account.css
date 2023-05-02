@@ -72,3 +72,6 @@
     border: none;
     border-radius: 40px;
 }
+.add-acc-btn svg{
+    color: #000000;
+}

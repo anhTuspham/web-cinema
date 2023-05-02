@@ -1,5 +1,6 @@
 .feature{
     display: flex;
+    gap: .8rem;
 }
 
 .reminder{
@@ -7,7 +8,9 @@
     display: flex;
     padding: 1.5rem 1.2rem 1.5rem 1.3rem;
     border-radius: 20px;
-    background-color: #87CEFA;
+    /*background-color: #87CEFA;*/
+    background-image: url("/src/img/film3.png");
+
 }
 
 .category{
@@ -64,6 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .6rem;
 }
 
 .flip-card{
@@ -75,7 +79,7 @@
 
 }
 .top-card, .bot-card{
-    background-color: #9a9a9a;
+    background-color: rgba(172, 166, 169, 1);
     line-height: 1;
     padding: .25em;
     height: .25em;
@@ -101,7 +105,7 @@
 }
 .direction-btn{
     padding: .75rem 1.15rem;
-    background-color: #A9A9A9;
+    background-color: var(--background-feature-color);
     border: none;
     cursor: pointer;
 }

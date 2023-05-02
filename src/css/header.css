@@ -6,19 +6,17 @@
     align-items: center;
     overflow: hidden;
 }
+a img{
+    box-sizing: content-box;
+    clip-path: inset(10px);
+}
 .logo-part{
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-/*.logo-part img{*/
-/*    width: 200px;*/
-/*    height: 200px;*/
-/*    display: block;*/
-/*    margin: 0 auto;*/
-/*    vertical-align: middle;*/
-/*}*/
+
 .header-part{
     flex: 4;
     margin: 20px;
@@ -26,7 +24,9 @@
     justify-content: flex-end;
     gap: 12px;
 }
-
+#login-btn{
+    color: white;
+}
 .login-btn{
     margin-right: auto;
 }
