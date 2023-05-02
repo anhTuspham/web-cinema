@@ -6,12 +6,12 @@
 @import "content.css";
 @import "setting-logout.css";
 @import "category.css";
+@import "movie-list.css";
 
 :root{
     --background-main-color: linear-gradient(to bottom right, #72b9f8, #0c87fa);
     --background-feature-color: rgba(172, 166, 169, 0.85);
     --background-category-color: linear-gradient(to bottom right, rgba(9,50,59,1) 0%, rgba(37,38,61,1) 0%, rgba(6,18,62,1) 100%);
-    /*--main-color: linear-gradient(128deg, rgba(18,40,65,1) 0%, rgba(9,50,59,1) 0%, rgba(7,33,57,1) 84%, rgba(1,27,64,1) 100%);*/
     --main-color: #21212d;
     --menu-color: rgb(15, 25, 87);
 }
@@ -38,14 +38,24 @@ ul{
     padding-inline-start: 0;
     gap: 10px;
 }
-
+.btn{
+    display: flex;
+    align-items: center;
+    border: 1px solid #4aa4fa;
+    background-image: var(--background-main-color);
+    border-radius: 15px;
+    padding: 12px 15px;
+    cursor: pointer;
+}
 
 a{
     text-decoration: none;
     color: white;
     font-weight: 400;
 }
-
+h2{
+    margin: 0;
+}
 h4,h5{
     font-weight: 500;
 }
@@ -58,4 +68,6 @@ svg{
 p{
     margin: 5px
 }
-
+input{
+    color: white;
+}

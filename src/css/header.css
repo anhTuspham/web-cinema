@@ -26,6 +26,8 @@ a img{
 }
 #login-btn{
     color: white;
+    display: flex;
+    gap: 5px
 }
 .login-btn{
     margin-right: auto;
@@ -55,7 +57,7 @@ a img{
 }
 
 .header-btn:hover{
-    background: rgba(122, 116, 116, 0.25);
+    background: var(--background-main-color);
 }
 
 .header-btn button{

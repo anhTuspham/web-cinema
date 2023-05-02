@@ -33,6 +33,7 @@
 }
 .upper-count-box{
     display: flex;
+    gap: .5rem;
     align-items: center;
     border: 1px solid #A9A9A9;
     border-bottom: 1px dashed #000000;
@@ -43,15 +44,14 @@
     margin: 0;
 }
 
-.remind-btn{
-    display: flex;
-    align-items: center;
-    border: 1px solid #4aa4fa;
-    /*background-color: #4aa4fa;*/
-    background-image: var(--background-main-color);
-    border-radius: 15px;
-    padding: 12px 15px;
-}
+/*.remind-btn{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    border: 1px solid #4aa4fa;*/
+/*    background-image: var(--background-main-color);*/
+/*    border-radius: 15px;*/
+/*    padding: 12px 15px;*/
+/*}*/
 
 /*Count down time*/
 .lower-count-box{
@@ -87,7 +87,7 @@
 }
 
 .top-card{
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     border-top-left-radius: .4em;
     border-top-right-radius: .4em;
 
