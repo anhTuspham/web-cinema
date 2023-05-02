@@ -3,7 +3,7 @@
     flex-direction: column;
     border-radius: 25px;
     padding: 15px 15px;
-    background-image: linear-gradient(to bottom right, #72b9f8, #0c87fa);
+    background-image: var(--background-main-color);
 }
 .profile-account{
     display: flex;

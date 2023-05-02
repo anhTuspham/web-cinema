@@ -23,7 +23,8 @@
 
 .upper-count-box, .lower-count-box{
     padding: 15px;
-    background-color: #A9A9A9;
+    /*background-color: #A9A9A9;*/
+    background-color: var(--background-feature-color);
     border-radius: 20px;
 
 }
@@ -43,7 +44,8 @@
     display: flex;
     align-items: center;
     border: 1px solid #4aa4fa;
-    background-color: #4aa4fa;
+    /*background-color: #4aa4fa;*/
+    background-image: var(--background-main-color);
     border-radius: 15px;
     padding: 12px 15px;
 }

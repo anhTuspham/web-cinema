@@ -5,6 +5,11 @@
 @import "movie-single.css";
 @import "content.css";
 @import "setting-logout.css";
+
+:root{
+    --background-main-color: linear-gradient(to bottom right, #72b9f8, #0c87fa);
+    --background-feature-color: rgba(172, 166, 169, 0.36);
+}
 body{
     font-family: 'Sora', sans-serif;
     background: rgba(190, 213, 210, 0.46);
