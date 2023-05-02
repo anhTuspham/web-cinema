@@ -6,17 +6,11 @@ ul{
     padding-inline-start: 0;
     gap: 10px;
 }
-li a{
-    text-decoration: none;
-    color: #000000;
-}
 
 .menu-bar{
     padding: 5px 0;
 }
-li a h4{
-    font-weight: 800;
-}
+
 
 .title-menu{
     background-color: #87CEFA;

@@ -1,0 +1,114 @@
+.feature{
+    display: flex;
+}
+
+.reminder{
+    flex: 4;
+    display: flex;
+    padding: 1.5rem 1.2rem 1.5rem 1.3rem;
+    border-radius: 20px;
+    background-color: #87CEFA;
+}
+
+.category{
+    flex: 1;
+}
+.name-movie-and-arrow-btn{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+
+.upper-count-box, .lower-count-box{
+    padding: 15px;
+    background-color: #A9A9A9;
+    border-radius: 20px;
+
+}
+.upper-count-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid #A9A9A9;
+    border-bottom: 1px dashed #000000;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.remind-box h5{
+    margin: 0;
+}
+
+.remind-btn{
+    display: flex;
+    align-items: center;
+    border: 1px solid #4aa4fa;
+    background-color: #4aa4fa;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
+/*Count down time*/
+.lower-count-box{
+    display: flex;
+    gap: 1.5em;
+    font-size: 24px;
+    border-top: transparent;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+
+}
+.time-segment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flip-card{
+    display: inline-flex;
+    flex-direction: column;
+
+}
+.card-segment{
+
+}
+.top-card, .bot-card{
+    background-color: #9a9a9a;
+    line-height: 1;
+    padding: .25em;
+    height: .25em;
+    overflow: hidden;
+}
+
+.top-card{
+    margin-bottom: 1px;
+    border-top-left-radius: .4em;
+    border-top-right-radius: .4em;
+
+}
+.bot-card{
+    display: flex;
+    align-items: flex-end;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
+}
+
+/*Direction button*/
+.arrow-btn{
+    display: inline-flex;
+}
+.direction-btn{
+    padding: .75rem 1.15rem;
+    background-color: #A9A9A9;
+    border: none;
+    cursor: pointer;
+}
+.direction-btn.right{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.direction-btn.left{
+    border-right: 1px solid #d3d3d3;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
