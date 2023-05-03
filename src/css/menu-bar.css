@@ -13,12 +13,13 @@ ul{
 
 
 .title-menu{
-    /*background-color: #87CEFA;*/
-    background: var(--menu-color);
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 25px;
+}
+.title-menu.selected{
+    background: var(--menu-color);
     border-left: solid 4px #0c87fa;
     border-radius: 10px;
 }
