@@ -11,14 +11,21 @@ ul{
     padding: 5px 0;
 }
 
-
 .title-menu{
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 25px;
 }
-.title-menu.selected{
+.title-container{
+    transition: ease-in .15s;
+}
+.title-container.selected{
+    background: var(--menu-color);
+    border-left: solid 4px #0c87fa;
+    border-radius: 10px;
+}
+.title-container:hover{
     background: var(--menu-color);
     border-left: solid 4px #0c87fa;
     border-radius: 10px;
