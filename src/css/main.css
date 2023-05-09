@@ -10,7 +10,7 @@
 
 :root{
     --background-main-color: linear-gradient(to bottom right, #72b9f8, #0c87fa);
-    --background-feature-color: rgba(172, 166, 169, 0.85);
+    --background-feature-color: rgba(172, 166, 169, 0.95);
     --background-category-color: linear-gradient(to bottom right, rgba(9,50,59,1) 0%, rgba(37,38,61,1) 0%, rgba(6,18,62,1) 100%);
     --main-color: #21212d;
     --menu-color: rgb(15, 25, 87);
