@@ -5,7 +5,7 @@ const apiKey = process.env.OMDB_API_KEY
 
 export const film = async function(){
     try{
-        const res = await fetch(`${API_URL}?apikey=${apiKey}&i=tt7935784`);
+        const res = await fetch(`${API_URL}?apikey=${apiKey}&i=tt13045890`);
         const data = await res.json();
         console.log(res,data);
         if(!res.ok) throw new Error(`${data.Error} (${res.status})`);
@@ -17,7 +17,7 @@ export const film = async function(){
         console.log(film);
         console.log(film.rating > 7 ? film.rating : 'Fuck you');
         let detailMovie =
-            `<img alt="${film.title}" src="${film.poster}" ">
+            `<img alt="${film.title}" src="${film.poster}">
              <div class="title" >
                 <p>${film.title}</p>
              </div>
@@ -28,6 +28,8 @@ export const film = async function(){
                 ${film.rating}
              </div>`;
         document.getElementById('single-detail').innerHTML = detailMovie;
+
+        document.getElementById('reminder-container').style.backgroundImage = `url(<img src="${film.poster}" alt="${film.title}">)`;
     }
     catch (err){
         alert(err);

@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link href="src/img/logo.png">
     <script type="module" src="src/js/view/View.js"></script>
+    <script type="module" src="src/js/view/count-time.js"></script>
+<!--    <script>-->
+<!--        fetch(`http://www.omdbapi.com/?apikey=e448411&i=tt13045890`)-->
+<!--            .then(res => {-->
+<!--                return res.json();-->
+<!--            })-->
+<!--            .then(data => {-->
+<!--                console.log(data);-->
+<!--            })-->
+<!--            .catch(error => console.log(error));-->
+<!--    </script>-->
 
 </head>
 <body>
@@ -48,7 +59,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
                 </svg>
-                Easy log in by phone
+                Log in
             </button>
 
             <button class="header-btn" id="location-btn">
@@ -193,7 +204,7 @@
 
         <div class="right-column-container">
             <div class="feature">
-                <div class="reminder">
+                <div class="reminder" id="reminder-container">
                     <div class="count-box">
                         <div class="upper-count-box">
                             <h4>Do you want to be reminded?</h4>
@@ -207,78 +218,59 @@
                             </div>
                         </div>
                         <div class="lower-count-box">
-                            <div class="time-segment">
-                                <div class="card-segment">
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
+                            <div class="timer-segment">
+                                <div class="time-segment">
+                                    <div class="segment-container">
+                                        <div class="segment">
+                                            <div class="flip-card" data-days-ten="">
+                                                <div class="top">0</div>
+                                                <div class="bottom">0</div>
+                                            </div>
                                         </div>
-                                        <div class="bot-card">
-                                            5
-                                        </div>
-                                    </div>
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
-                                        </div>
-                                        <div class="bot-card">
-                                            5
+                                        <div class="segment">
+                                            <div class="flip-card" data-days-one="">
+                                                <div class="top">2</div>
+                                                <div class="bottom">2</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="timer-title">Days</div>
                                 </div>
-                                <div class="card-title">
-                                    DAYS
-                                </div>
-
-                            </div>
-                            <div class="time-segment">
-                                <div class="card-segment">
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
+                                <div class="time-segment">
+                                    <div class="segment-container">
+                                        <div class="segment">
+                                            <div class="flip-card" data-hours-ten="">
+                                                <div class="top">0</div>
+                                                <div class="bottom">0</div>
+                                            </div>
                                         </div>
-                                        <div class="bot-card">
-                                            5
-                                        </div>
-                                    </div>
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
-                                        </div>
-                                        <div class="bot-card">
-                                            5
+                                        <div class="segment">
+                                            <div class="flip-card" data-hours-one="">
+                                                <div class="top">0</div>
+                                                <div class="bottom">0</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="timer-title">Hours</div>
                                 </div>
-                                <div class="card-title">
-                                    HOURS
-                                </div>
-
-                            </div>
-                            <div class="time-segment">
-                                <div class="card-segment">
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
+                                <div class="time-segment">
+                                    <div class="segment-container">
+                                        <div class="segment">
+                                            <div class="flip-card" data-minutes-ten="">
+                                                <div class="top">0</div>
+                                                <div class="bottom">0</div>
+                                            </div>
                                         </div>
-                                        <div class="bot-card">
-                                            5
+                                        <div class="segment">
+                                            <div class="flip-card" data-minutes-one="">
+                                                <div class="top">0</div>
+                                                <div class="bottom">0</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flip-card">
-                                        <div class="top-card">
-                                            5
-                                        </div>
-                                        <div class="bot-card">
-                                            5
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-title">
-                                    MINUTES
+                                    <div class="timer-title">Minutes</div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="name-movie-and-arrow-btn">
