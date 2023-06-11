@@ -1,19 +1,13 @@
 import * as model from './model.js'
-
-export const wrapper = function(elementItem){
-    const wraps = document.querySelectorAll(elementItem);
-    wraps.forEach(wrap =>{
-        wrap.addEventListener('click',e => {
-            e.preventDefault();
-            wraps.forEach(container =>{
-                container.classList.remove('selected');
-            });
-            wrap.classList.add('selected');
-        })
-    })
-}
+import './view/menu-bar.js'
+import './view/category.js'
 
 const controlFilm = async function(){
     await model.film();
 }
-controlFilm();
+
+const init = function (){
+    controlFilm();
+}
+
+init();

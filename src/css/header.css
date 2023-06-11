@@ -71,6 +71,9 @@ a img{
     border-radius: 12px;
     z-index: 1;
     min-width: 36rem;
+    max-height: 25rem;
+    overflow-y: scroll;
+
 }
 .search-list-container .hidden{
     display: none;

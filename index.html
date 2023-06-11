@@ -11,18 +11,9 @@
     <title>Cinematic</title>
     <link rel="stylesheet" href="src/css/main.css">
     <link href="src/img/logo.png">
-    <script type="module" src="src/js/view/View.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="module" src="src/js/controller.js"></script>
     <script type="module" src="src/js/view/count-time.js"></script>
-<!--    <script>-->
-<!--        fetch(`http://www.omdbapi.com/?apikey=e448411&i=tt13045890`)-->
-<!--            .then(res => {-->
-<!--                return res.json();-->
-<!--            })-->
-<!--            .then(data => {-->
-<!--                console.log(data);-->
-<!--            })-->
-<!--            .catch(error => console.log(error));-->
-<!--    </script>-->
 
 </head>
 <body>
@@ -43,19 +34,18 @@
                         </svg>
                     </button>
                     <input
-                            aria-label="Search"
                             type="text"
                             class="search__input"
                             placeholder="Type to search"
                             id="id-search"
-                    />
+                    >
                     <button class="search-btn micro">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
                         </svg>
                     </button>
                 </form>
-                <div class="search-list-container">
+                <div class="search-list-container" id="search-list-container">
                     <div class="search-list">
                         <div class="search-thumbnail">
                             <img src="src/img/film1.jpg">
@@ -481,6 +471,8 @@
 
         </div>
     </div>
+
+
 </div>
 </body>
 </html>

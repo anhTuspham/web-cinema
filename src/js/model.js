@@ -7,15 +7,15 @@ export const film = async function(){
     try{
         const res = await fetch(`${API_URL}?apikey=${apiKey}&i=tt13045890`);
         const data = await res.json();
-        console.log(res,data);
+        // console.log(res,data);
         if(!res.ok) throw new Error(`${data.Error} (${res.status})`);
 
         let {Title: title,Writer: writer, Country: country,
             Genre: genre,Language: language,Plot: plot,Poster:poster,
             Runtime: runtime,imdbRating: rating  } = data;
         let film = {title, writer,country,genre,language, plot,poster,runtime,rating};
-        console.log(film);
-        console.log(film.rating > 7 ? film.rating : 'Fuck you');
+        // console.log(film);
+        // console.log(film.rating > 7 ? film.rating : 'Fuck you');
         let detailMovie =
             `<img alt="${film.title}" src="${film.poster}">
              <div class="title" >
@@ -35,4 +35,23 @@ export const film = async function(){
         alert(err);
     }
 };
-film();
+const movieSearchBox = document.getElementById('id-search');
+// const movieSearchList = document.getElementById('search-list-container')
+// const loadMovieData = async function(searchItem){
+//     try{
+//         let response = await fetch(`${API_URL}?apikey=${apiKey}&s=${searchItem}`);
+//         if(!response.ok){
+//             throw 'Something went wrong'
+//         }
+//         let data = await response.json();
+//         console.log(data.Search)
+//     }
+//     catch (err){
+//         console.error(err)
+//     }
+// }
+movieSearchBox.addEventListener('keyup',function (){
+    let searchItem = (movieSearchBox.value).trim();
+    console.log(searchItem)
+})
+

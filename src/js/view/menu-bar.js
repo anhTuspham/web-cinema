@@ -1,4 +1,4 @@
-import {wrapper} from "../controller.js";
+import {wrapper} from "./View.js";
 
 wrapper('.title-container');
 
