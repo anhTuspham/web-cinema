@@ -35,23 +35,5 @@ export const film = async function(){
         alert(err);
     }
 };
-const movieSearchBox = document.getElementById('id-search');
-// const movieSearchList = document.getElementById('search-list-container')
-// const loadMovieData = async function(searchItem){
-//     try{
-//         let response = await fetch(`${API_URL}?apikey=${apiKey}&s=${searchItem}`);
-//         if(!response.ok){
-//             throw 'Something went wrong'
-//         }
-//         let data = await response.json();
-//         console.log(data.Search)
-//     }
-//     catch (err){
-//         console.error(err)
-//     }
-// }
-movieSearchBox.addEventListener('keyup',function (){
-    let searchItem = (movieSearchBox.value).trim();
-    console.log(searchItem)
-})
+
 

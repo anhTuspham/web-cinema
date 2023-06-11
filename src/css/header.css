@@ -73,9 +73,8 @@ a img{
     min-width: 36rem;
     max-height: 25rem;
     overflow-y: scroll;
-
 }
-.search-list-container .hidden{
+.search-list-container.hidden{
     display: none;
 }
 .search-list{
