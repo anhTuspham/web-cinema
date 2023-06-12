@@ -70,9 +70,12 @@ a img{
     background-color: #F8F8F8;
     border-radius: 12px;
     z-index: 1;
-    min-width: 36rem;
-    max-height: 25rem;
-    overflow-y: scroll;
+    width: 36rem;
+    max-height: 23rem;
+    overflow-y: hidden;
+}
+.search-list-container::-webkit-scrollbar{
+    display: none;
 }
 .search-list-container.hidden{
     display: none;
@@ -83,9 +86,12 @@ a img{
     /*margin-top: 4px;*/
     gap: 1em;
     border-bottom: #0f1957;
-
 }
-.search-list h3{
+.search-list:hover{
+    background:#DCDCDC;
+    cursor: pointer;
+}
+.search-list h3, .search-list h4{
     color: 	#100000;
 }
 .search-thumbnail{
@@ -93,7 +99,7 @@ a img{
     background-color: #0f1957;
 }
 .search-thumbnail img{
-    width: 2rem;
+    width: 4rem;
     height: auto;
     aspect-ratio: 5 / 8 ;
 }

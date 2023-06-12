@@ -1,4 +1,5 @@
 import {API_URL} from "../config.js";
+// import {API_URL} from "src/img/image-not-found.png"
 const dotenv = require('dotenv');
 dotenv.config();
 const apiKey = process.env.OMDB_API_KEY
@@ -14,7 +15,10 @@ const loadMovieData = async function(searchItem){
             throw 'Something went wrong'
         }
         let data = await response.json();
-        console.log(data.Search)
+        // displayMovieList(data.Search)
+        console.log(data)
+        if(data.Response === "True")
+            displayMovieList(data.Search)
     }
     catch (err){
         console.error(err)
@@ -34,6 +38,36 @@ const searchMovieData = function (){
     })
 }
 searchMovieData()
+
+// Display movie list
+
+const displayMovieList = function (movie){
+    let moviePoster;
+    movieSearchList.innerHTML = '';
+    for(let i = 0;i < movie.length; i++){
+        let movieList = document.createElement('div');
+        movieList.dataset.id = movie[i].imdbID;
+        if(movie[i].Poster !== 'N/A'){
+            moviePoster = movie[i].Poster
+        }
+        else {
+            moviePoster = "image-not-found.png"
+            console.log(movieList)
+        }
+        movieList.classList.add('search-list');
+        movieList.innerHTML =
+            `<div class="search-thumbnail">
+                 <img src=${moviePoster}>
+            </div>
+            <div class="search-item-info">
+                 <h4>${movie[i].Title}</h4>
+            </div>`
+
+        movieSearchList.appendChild(movieList);
+    }
+}
+
+
 
 window.addEventListener('click',e =>{
     if(e.target.closest('.search-container')){
