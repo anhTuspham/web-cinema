@@ -1,0 +1,13 @@
+.overlay {
+    color: black;
+}
+.overlay svg{
+    color: black;
+}
+.movie-detail-container{
+
+}
+.movie-detail{
+    display: flex;
+
+}
