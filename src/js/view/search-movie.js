@@ -1,5 +1,4 @@
 import {API_URL} from "../config.js";
-// import {API_URL} from "src/img/image-not-found.png"
 const dotenv = require('dotenv');
 dotenv.config();
 const apiKey = process.env.OMDB_API_KEY
@@ -16,7 +15,7 @@ const loadMovieData = async function(searchItem){
         }
         let data = await response.json();
         // displayMovieList(data.Search)
-        console.log(data)
+        // console.log(data)
         if(data.Response === "True")
             displayMovieList(data.Search)
     }
@@ -52,7 +51,7 @@ const displayMovieList = function (movie){
         }
         else {
             moviePoster = "image-not-found.png"
-            console.log(movieList)
+            // console.log(movieList)
         }
         movieList.classList.add('search-list');
         movieList.innerHTML =
@@ -66,6 +65,8 @@ const displayMovieList = function (movie){
         movieSearchList.appendChild(movieList);
     }
 }
+
+// Load Movie Detail
 
 
 
