@@ -1,12 +1,19 @@
-.overlay.overlay-active{
-    display: block;
-}
-.container.overlay-active{
-    filter: blur(10px);
-    pointer-events: none;
-}
+/*.overlay.overlay-active{*/
+/*    display: block;*/
+/*}*/
+/*.container.overlay-active{*/
+/*    filter: blur(10px);*/
+/*    pointer-events: none;*/
+/*}*/
 body.overlay-active{
     overflow-y: hidden;
+}
+body.overlay-active .overlay{
+    display: block;
+}
+body.overlay-active .container{
+    filter: blur(10px);
+    pointer-events: none;
 }
 
 .overlay {
@@ -14,16 +21,18 @@ body.overlay-active{
     color: black;
 }
 .overlay h2{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 .overlay h4{
     margin: 0;
 }
-.overlay svg{
-    color: black;
-}
+/*.overlay svg{*/
+/*    color: black;*/
+/*}*/
 .movie-detail-container{
     /*display: none;*/
+    min-width: 60rem;
+    min-height: 39rem;
     border-radius: 12px;
     padding: 8px;
     top: 50%;
@@ -56,6 +65,12 @@ body.overlay-active{
     aspect-ratio: 5 / 8 ;
 }
 
+.right-content .movie-review,
+.right-content svg{
+    color: #017bde;
+    font-weight: 600;
+}
+
 .right-content .detail{
     display: flex;
     gap: 5px;
@@ -71,4 +86,12 @@ body.overlay-active{
     flex-direction: column;
     gap: .7rem;
     margin-top: 1rem;
+}
+.close-detail-btn{
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+}
+.close-detail-btn .w-6 {
+    cursor: pointer;
 }
