@@ -1,5 +1,4 @@
 'use strict'
-
 let countToDate = new Date().setDate(new Date().getDate() + 2);
 let previousTime;
 

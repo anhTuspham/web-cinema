@@ -1,10 +1,4 @@
-/*.overlay.overlay-active{*/
-/*    display: block;*/
-/*}*/
-/*.container.overlay-active{*/
-/*    filter: blur(10px);*/
-/*    pointer-events: none;*/
-/*}*/
+
 body.overlay-active{
     overflow-y: hidden;
 }
@@ -26,9 +20,7 @@ body.overlay-active .container{
 .overlay h4{
     margin: 0;
 }
-/*.overlay svg{*/
-/*    color: black;*/
-/*}*/
+
 .movie-detail-container{
     /*display: none;*/
     min-width: 60rem;
@@ -39,8 +31,9 @@ body.overlay-active .container{
     left: 50%;
     transform: translate(-50%,-50%);
     background: black;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 999;
+    position: fixed;
 
 }
 .movie-detail{

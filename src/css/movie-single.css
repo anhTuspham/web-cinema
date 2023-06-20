@@ -1,9 +1,10 @@
-.movie-single img{
-    height: 200px;
-    width: 200px;
-}
+/*.movie-single img{*/
+/*    height: 200px;*/
+/*    width: 200px;*/
+/*}*/
 .movie-single{
     padding: 5px;
+    cursor: pointer;
 }
 .movie-single:hover{
     box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
