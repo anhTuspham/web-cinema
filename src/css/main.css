@@ -14,6 +14,7 @@
     --background-category-color: linear-gradient(to bottom right, rgba(9,50,59,1) 0%, rgba(37,38,61,1) 0%, rgba(6,18,62,1) 100%);
     --main-color: #21212d;
     --menu-color: rgb(15, 25, 87);
+    --size-spinner: 30px;
 }
 body{
     font-family: 'Sora', sans-serif;
@@ -29,7 +30,6 @@ body{
     border-radius: 30px;
     background: var(--main-color);
 }
-
 ul{
     display: flex;
     flex-direction: column;

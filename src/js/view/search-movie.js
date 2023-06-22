@@ -11,6 +11,14 @@ const movieSearchList = document.getElementById('search-list-container')
 const movieList = document.querySelector('.movie-list');
 
 
+// Load spinner
+export const renderSpinner = function (parentEl){
+    const markup =
+        `<div class="spinner"></div>`
+    parentEl.innerHTML = ``;
+    parentEl.insertAdjacentHTML("afterbegin",markup)
+}
+
 // Load movie data
 const loadMovieData = async function(searchItem){
     try{
@@ -29,8 +37,9 @@ const loadMovieData = async function(searchItem){
 }
 
 // Find movie
-const searchMovieData = function (){
+export const searchMovieData = function (){
     movieSearchBox.addEventListener('keyup',function (){
+        renderSpinner(movieSearchList)
         let searchItem = (movieSearchBox.value).trim();
         if (searchItem.length > 0){
             movieSearchList.classList.remove('hidden');
@@ -40,7 +49,7 @@ const searchMovieData = function (){
 
     })
 }
-searchMovieData()
+// searchMovieData()
 
 // Display movie list
 
@@ -78,6 +87,7 @@ const loadMovieDetail = function(){
     movieSingle.forEach(movie => {
         movie.addEventListener('click',async () =>{
             // console.log(movie.dataset.id)
+            renderSpinner(overlay)
             movieSearchList.classList.add('hidden')
             movieSearchBox.value = '';
             body.classList.add('overlay-active');
@@ -145,7 +155,8 @@ const displayMovieDetail = function (movie){
 const popularMovie = [2382320,7286456,1502397,1798709,7550000]
 
 // Display Movie Popular
-const displayMoviePopular = async function(){
+export const displayMoviePopular = async function(){
+
     for(let i = 0; i < popularMovie.length; i++){
         const movieSingle = document.createElement('div')
         movieSingle.classList.add('movie-single')
@@ -164,12 +175,13 @@ const displayMoviePopular = async function(){
             </div>`
         movieList.appendChild(movieSingle)
         movieSingle.addEventListener('click',() =>{
+            renderSpinner(overlay)
             body.classList.add('overlay-active')
             displayMovieDetail(data)
         })
     }
 }
-displayMoviePopular()
+// displayMoviePopular()
 
 
 window.addEventListener('click', e =>{
