@@ -12,7 +12,7 @@ const movieList = document.querySelector('.movie-list');
 
 
 // Load spinner
-export const renderSpinner = function (parentEl){
+const renderSpinner = function (parentEl){
     const markup =
         `<div class="spinner"></div>`
     parentEl.innerHTML = ``;
@@ -39,9 +39,9 @@ const loadMovieData = async function(searchItem){
 // Find movie
 export const searchMovieData = function (){
     movieSearchBox.addEventListener('keyup',function (){
-        renderSpinner(movieSearchList)
         let searchItem = (movieSearchBox.value).trim();
         if (searchItem.length > 0){
+            renderSpinner(movieSearchList)
             movieSearchList.classList.remove('hidden');
             loadMovieData(searchItem);
         }

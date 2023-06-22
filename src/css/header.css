@@ -107,6 +107,7 @@ a img{
 /*Header box*/
 
 .header-btn-container{
+    gap: 12px;
     display: flex;
     max-height: 3.45rem;
 }
@@ -124,6 +125,7 @@ a img{
 }
 
 .header input{
+    font-size: 1.05rem;
     min-width: 30rem;
     max-width: 80rem;
     border: none;

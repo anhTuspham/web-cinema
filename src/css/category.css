@@ -18,7 +18,6 @@
 .option-container.active{
     max-height: 14rem;
     overflow-y: scroll;
-    /*opacity: 1;*/
 }
 .option{
     display: flex;
@@ -28,13 +27,15 @@
     border-radius: .8rem;
     background: var(--background-category-color);
     cursor: pointer;
-    transition: ease-in 1s;
+    transition: ease-in-out .07s;
+    color: #585858;
 }
 .option:hover{
     background: var(--background-main-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 .option.selected{
+    color: white;
     background: var(--background-main-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 
@@ -44,7 +45,6 @@
 }
 .select-box .option label{
     cursor: pointer;
-    color: white;
 }
 .select-box .option input{
     display: none;
