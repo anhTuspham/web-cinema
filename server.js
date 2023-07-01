@@ -1,9 +1,9 @@
-// const express = require("express");
-// const app = express();
-//
-// const cors = require("cors");
-// app.use(
-//     cors({
-//         origin: "http://www.omdbapi.com",
-//     })
-// )
+import express from 'express'
+const app = express();
+
+app.get('/', (req,res) => {
+    res.redirect('/login')
+})
+
+console.log('anhtu')
+app.listen(3003);
