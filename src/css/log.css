@@ -45,15 +45,15 @@
     align-items: center;
     gap: 18px;
 }
-.log-form input{
+.log-form .log-box input{
     border: 1px solid white;
     box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
     border-radius: 7px;
     width: 100%;
     max-width: 500px;
 }
-.log-form input,
-.log-form label{
+.log-form .log-box input,
+.log-form .log-box label{
     padding: 10px 20px;
 }
 .log-box{
@@ -65,22 +65,32 @@
     box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9;
     transition: .25s;
 }
-.log-form input:focus ~ label,
-.log-form input:not(:placeholder-shown) ~ label{
-    top: -28px;
-    left: 0;
-    font-size: .75rem;
-    color: #4883e3;
-}
 
-.log-form label{
+.log-form .log-box label{
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
     transition: .25s;
 }
-
+.log-form .log-box input:focus ~ label,
+.log-form .log-box input:not(:placeholder-shown) ~ label
+{
+    top: -28px;
+    left: 0;
+    font-size: .75rem;
+    color: #4883e3;
+}
+.log-form .show-password label{
+    position:relative;
+}
+.log-form .show-password{
+    position: relative;
+    left: 95px;
+}
+.log-form .show-password input{
+    box-shadow: none;
+}
 
 .log-form-btn{
     margin-top: 15px;
