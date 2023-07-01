@@ -1,4 +1,3 @@
-
 body.overlay-active{
     overflow-y: hidden;
 }
@@ -8,6 +7,9 @@ body.overlay-active .overlay{
 body.overlay-active .container{
     filter: blur(10px);
     pointer-events: none;
+}
+body .container{
+    filter: blur(10px);
 }
 
 .overlay {
@@ -34,7 +36,6 @@ body.overlay-active .container{
     /*position: absolute;*/
     z-index: 999;
     position: fixed;
-
 }
 .movie-detail{
     display: flex;
@@ -47,9 +48,7 @@ body.overlay-active .container{
 .right-content{
     flex-basis: 60%;
 }
-.movie-image{
-    /*width: 20rem;*/
-}
+
 .movie-image img{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;

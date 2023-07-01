@@ -5,7 +5,6 @@ import './view/search-movie.js'
 import './view/remind-box.js'
 import {displayMoviePopular, renderSpinner, searchMovieData} from "./view/search-movie.js";
 
-const movieList = document.querySelector('.movie-list');
 
 const dotenv = require('dotenv');
 dotenv.config();

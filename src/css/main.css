@@ -8,6 +8,7 @@
 @import "category.css";
 @import "movie-list.css";
 @import "overlay.css";
+@import "log.css";
 :root{
     --background-main-color: linear-gradient(to bottom right, #72b9f8, #0c87fa);
     --background-feature-color: rgba(150, 150, 150, 0.725);
