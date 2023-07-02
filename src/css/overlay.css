@@ -8,9 +8,6 @@ body.overlay-active .container{
     filter: blur(10px);
     pointer-events: none;
 }
-body .container{
-    filter: blur(10px);
-}
 
 .overlay {
     display: none;
@@ -83,6 +80,9 @@ body .container{
     position: absolute;
     right: 1.2rem;
     top: 1.2rem;
+}
+.close-detail-btn svg{
+    color: black;
 }
 .close-detail-btn .w-6 {
     cursor: pointer;

@@ -1,3 +1,15 @@
+/*Show login form*/
+body.log-form-active{
+    overflow-y: hidden;
+}
+body.log-form-active .container{
+    filter: blur(10px);
+    pointer-events: none;
+}
+body.log-form-active .log-container{
+    display: block;
+}
+
 .log-container input{
     color: black;
     font-size: 1.2rem;
@@ -12,6 +24,7 @@
     font-size: 1.2rem;
 }
 .log-container{
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -20,23 +33,38 @@
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.log-container,
+.log-detail,
+.log-detail-right{
+    border-radius: 10px;
+}
+.log-detail-left{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 .log-detail{
     display: flex;
+    box-shadow: #d1d9e6 2px 2px 5px, #f9f9f9 -1px -1px 5px;
 }
 .log-detail-left{
     padding: 5rem;
     flex-basis: 60%;
+    box-shadow: #d1d9e6 4px 2px 5px;
+
 }
 .log-detail-right{
     padding: 8rem 5rem;
     flex-basis: 40%;
-    box-shadow: red -5px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .log-detail-title{
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 .log-form{
@@ -82,14 +110,20 @@
     color: #4883e3;
 }
 .log-form .show-password label{
+    cursor: pointer;
     position:relative;
 }
 .log-form .show-password{
+    cursor: pointer;
     position: relative;
     left: 95px;
 }
 .log-form .show-password input{
+    cursor: pointer;
     box-shadow: none;
+}
+.log-form .show-password-checkbox input{
+    transition: 1s;
 }
 
 .log-form-btn{
@@ -108,5 +142,21 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    /*border-bottom: 1px solid black;*/
+}
+.log-description{
+    text-align: center;
+    color: #a0a5a8;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+.close-log-detail-btn svg{
+    color: black;
+}
+.close-log-detail-btn{
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+}
+.close-log-detail-btn .w-6 {
+    cursor: pointer;
 }
