@@ -307,81 +307,71 @@
 
 
 <div class="log-container">
-    <div class="log-detail">
-        <div class="log-detail-left">
-            <div class="log-detail-title">Sign in to Website</div>
-            <form class="log-form" action="/login" method="post">
-                <div class="log-box">
-                    <input placeholder=" " type="email"  id="email" name="email" required>
-                    <label class="label" for="email">Email</label>
-                </div>
-                <div class="log-box">
-                    <input placeholder=" " type="password"  id="password" name="password" required>
-                    <label class="label" for="password">Password</label>
-                </div>
-                <div class="show-password">
-                    <input class="show-password-checkbox" id="show-password-checkbox" type="checkbox">
-                    <label for="show-password-checkbox" >Show password</label>
-                </div>
-                <div>
-                    <button class="log-form-btn" type="submit">Sign In</button>
-                </div>
-            </form>
-            <div class="log-forgot-password">
-                <a href="https://youtube.com/">Forgot your password?</a>
+    <div class="log-detail sign-in-detail">
+        <div class="log-detail-title">Sign in to Website</div>
+        <form class="log-form" action="/login" method="post">
+            <div class="log-box">
+                <input placeholder=" " type="email"  id="email" name="email" required>
+                <label class="label" for="email">Email</label>
             </div>
+            <div class="log-box">
+                <input placeholder=" " type="password"  id="password" name="password" required>
+                <label class="label" for="password">Password</label>
+            </div>
+            <div class="show-password">
+                <input class="show-password-checkbox" id="show-password-checkbox" type="checkbox">
+                <label for="show-password-checkbox" >Show password</label>
+            </div>
+            <div class="submit-btn">
+                <button class="log-form-btn" type="submit">Sign In</button>
+            </div>
+        </form>
+        <div class="log-forgot-password">
+            <a href="#">Forgot your password?</a>
         </div>
-        <div class="log-detail-right">
-            <div class="log-detail-title">Hello Friend</div>
-            <div class="log-description">Enter your personal details and start journey with us</div>
-            <div class="log-switch-btn">
-                <button class="log-form-btn">Sign Up</button>
+    </div>
+    <div class="log-detail sign-up-detail">
+        <div class="log-detail-title">Create Account</div>
+        <form class="log-form" action="/signup" method="post">
+            <div class="log-box">
+                <input placeholder=" " type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="log-box">
+                <input placeholder=" " type="email"  id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="log-box">
+                <input placeholder=" " type="password"  id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="show-password">
+                <input class="show-password-checkbox" id="show-password-checkbox" type="checkbox">
+                <label for="show-password-checkbox" >Show password</label>
+            </div>
+            <div class="submit-btn">
+                <button class="log-form-btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <div class="overlay-log-detail-container">
+        <div class="overlay-log-detail">
+            <div class="panel panel-left">
+                <div class="log-detail-title">Welcome back</div>
+                <div class="log-description">To keep connected with us please log in with your personal info</div>
+            </div>
+            <div class="panel panel-right">
+                <div class="log-detail-title">Hello Friend</div>
+                <div class="log-description">Enter your personal details and start journey with us</div>
             </div>
         </div>
     </div>
-<!--    <div class="log-detail">-->
-<!--        <div class="log-detail-left">-->
-<!--            <div class="log-detail-title">Create Account</div>-->
-<!--            <form class="log-form" action="/signup" method="post">-->
-<!--                <div class="log-box">-->
-<!--                    <input placeholder=" " type="text" id="name" name="name" required>-->
-<!--                    <label for="name">Name</label>-->
-<!--                </div>-->
-<!--                <div class="log-box">-->
-<!--                    <input placeholder=" " type="email"  id="email" name="email" required>-->
-<!--                    <label for="email">Email</label>-->
-<!--                </div>-->
-<!--                <div class="log-box">-->
-<!--                    <input placeholder=" " type="password"  id="password" name="password" required>-->
-<!--                    <label for="password">Password</label>-->
-<!--                </div>-->
-<!--                <div class="show-password">-->
-<!--                    <input class="show-password-checkbox" id="show-password-checkbox" type="checkbox">-->
-<!--                    <label for="show-password-checkbox" >Show password</label>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <button class="log-form-btn" type="submit">Sign In</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--            <div class="log-forgot-password">-->
-<!--                <a href="https://youtube.com/">Forgot your password?</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="log-detail-right">-->
-<!--            <div class="log-detail-title">Hello Friend</div>-->
-<!--            <div class="log-description">Enter your personal details and start journey with us</div>-->
-<!--            <div class="log-switch-btn">-->
-<!--                <button class="log-form-btn">Sign Up</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
     <div class="close-log-detail-btn">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
     </div>
 </div>
-
 
 </body>
 </html>

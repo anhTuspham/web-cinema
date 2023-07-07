@@ -82,8 +82,8 @@ const displayMovieList = function (movie){
 // Load Movie Detail
 const loadMovieDetail = function(){
     const movieSingle = movieSearchList.querySelectorAll('.search-list')
-    console.log(movieSingle)
-    console.log(movieSearchList)
+    // console.log(movieSingle)
+    // console.log(movieSearchList)
     movieSingle.forEach(movie => {
         movie.addEventListener('click',async () =>{
             // console.log(movie.dataset.id)
@@ -93,7 +93,7 @@ const loadMovieDetail = function(){
             body.classList.add('overlay-active');
             const data = await fetch(`${API_URL}?apikey=${apiKey}&i=${movie.dataset.id}`)
                 .then(res => res.json())
-            console.log(data)
+            // console.log(data)
             displayMovieDetail(data)
         })
     })

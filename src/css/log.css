@@ -7,7 +7,7 @@ body.log-form-active .container{
     pointer-events: none;
 }
 body.log-form-active .log-container{
-    display: block;
+    display: flex;
 }
 
 .log-container input{
@@ -33,34 +33,17 @@ body.log-form-active .log-container{
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.log-container,
-.log-detail,
-.log-detail-right{
-    border-radius: 10px;
-}
-.log-detail-left{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
+
 .log-detail{
     display: flex;
-    box-shadow: #d1d9e6 2px 2px 5px, #f9f9f9 -1px -1px 5px;
-}
-.log-detail-left{
-    padding: 5rem;
-    flex-basis: 60%;
-    box-shadow: #d1d9e6 4px 2px 5px;
-
-}
-.log-detail-right{
-    padding: 8rem 5rem;
-    flex-basis: 40%;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    box-shadow: #d1d9e6 2px 2px 5px, #f9f9f9 -1px -1px 5px;
+    padding: 6rem;
 }
+
 .log-detail-title{
+    pointer-events: none;
+    user-select: none;
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
@@ -125,9 +108,10 @@ body.log-form-active .log-container{
 .log-form .show-password-checkbox input{
     transition: 1s;
 }
-
-.log-form-btn{
+.submit-btn{
     margin-top: 15px;
+}
+.log-form-btn{
     border-radius: 18px;
     padding: 10px 40px;
     background: var(--background-main-color);
@@ -160,3 +144,49 @@ body.log-form-active .log-container{
 .close-log-detail-btn .w-6 {
     cursor: pointer;
 }
+
+.sign-up-detail{
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+}
+.sign-in-detail{
+    position: relative;
+    z-index: 2;
+}
+.overlay-log-detail{
+    width: 100%;
+    height: 100%;
+}
+.panel{
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.panel-left{
+    z-index: 1;
+}
+.panel-right{
+    z-index: 2;
+}
+/*.log-container .sign-up-detail,*/
+/*.log-container .panel-left{*/
+/*    display: none;*/
+/*}*/
+/*.log-container .sign-in-detail,*/
+/*.log-container .panel-right{*/
+/*    display: flex;*/
+/*}*/
+/*.log-container.active-sign-up .sign-in-detail,*/
+/*.log-container.active-sign-up .panel-right{*/
+/*    display: none;*/
+/*}*/
+/*.log-container.active-sign-up .sign-up-detail,*/
+/*.log-container.active-sign-up .panel-left{*/
+/*    display: flex;*/
+/*}*/
