@@ -4,14 +4,14 @@ import './view/category.js'
 import './view/search-movie.js'
 import './view/remind-box.js'
 import {displayMoviePopular, renderSpinner, searchMovieData} from "./view/search-movie.js";
-import {displayLogForm, showPassword, toggleLoginForm} from "./view/log.js";
+import {displayLogForm, toggleLoginForm} from "./view/log.js";
 
 const dotenv = require('dotenv');
 dotenv.config();
 
 const displayLogin = () =>{
     displayLogForm();
-    showPassword();
+    // showPassword();
     toggleLoginForm();
 }
 const displayMovieFilm = () =>{

@@ -37,8 +37,11 @@ body.log-form-active .log-container{
 .log-detail{
     display: flex;
     flex-direction: column;
-    box-shadow: #d1d9e6 2px 2px 5px, #f9f9f9 -1px -1px 5px;
+    box-shadow: #d1d9e6 1px 1px 10px, #f9f9f9 -0px -0px 5px;
     padding: 6rem;
+}
+.panel{
+    box-shadow: #96add3 1px 1px 10px, #96add3 -1px -1px 5px;
 }
 
 .log-detail-title{
@@ -132,11 +135,13 @@ body.log-form-active .log-container{
     color: #a0a5a8;
     font-size: 0.85rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
 }
 .close-log-detail-btn svg{
     color: black;
 }
 .close-log-detail-btn{
+    z-index: 99;
     position: absolute;
     right: 1.2rem;
     top: 1.2rem;
@@ -145,15 +150,36 @@ body.log-form-active .log-container{
     cursor: pointer;
 }
 
-.sign-up-detail{
+.log-container.active-scroll .sign-up-detail{
     position: relative;
-    opacity: 1;
+    z-index: 1;
+    transform: translate(77%);
+    animation: scroll-sign-up-to-right 1s ease-out;
+}
+.log-container.active-scroll .sign-in-detail{
+    position: relative;
+    z-index: 1;
+    animation: scroll-sign-in-to-left 1s ease-out;
+}
+.log-container .sign-in-detail{
+    position: relative;
     z-index: 1;
 }
-.sign-in-detail{
+.log-container .sign-up-detail{
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
+
+
+@keyframes scroll-sign-up-to-right{
+    0% {transform: translate(0)}
+    100% {transform: translate(77%)}
+}
+@keyframes scroll-sign-in-to-left {
+    0%{ transform: translate(77%)}
+    100%{ transform: translate(0)}
+}
+
 .overlay-log-detail{
     width: 100%;
     height: 100%;
@@ -166,27 +192,32 @@ body.log-form-active .log-container{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgb(52, 95, 107);
+    z-index: 2;
+    position: relative;
 }
-.panel-left{
-    z-index: 1;
+.log-container.active-scroll .panel-left{
+    z-index: 2;
+    transform: translate(-130%);
+    animation: scroll-panel-to-left 1s ease-out;
 }
-.panel-right{
+.log-container.active-scroll .panel-right{
+    z-index: 2;
+    animation: scroll-panel-to-right 1s ease-out;
+}
+.log-container .panel-left{
     z-index: 2;
 }
-/*.log-container .sign-up-detail,*/
-/*.log-container .panel-left{*/
-/*    display: none;*/
-/*}*/
-/*.log-container .sign-in-detail,*/
-/*.log-container .panel-right{*/
-/*    display: flex;*/
-/*}*/
-/*.log-container.active-sign-up .sign-in-detail,*/
-/*.log-container.active-sign-up .panel-right{*/
-/*    display: none;*/
-/*}*/
-/*.log-container.active-sign-up .sign-up-detail,*/
-/*.log-container.active-sign-up .panel-left{*/
-/*    display: flex;*/
-/*}*/
+.log-container .panel-right{
+    z-index: 2;
+}
+
+@keyframes scroll-panel-to-left {
+    0% {transform: translate(0%)}
+    100% {transform: translate(-130%)}
+}
+
+@keyframes scroll-panel-to-right {
+    0% { transform: translate(-130%)}
+    100% {transform: translate(0%)}
+}
