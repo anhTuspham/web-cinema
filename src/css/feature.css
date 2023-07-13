@@ -6,21 +6,13 @@
 .reminder{
     flex: 4;
     display: flex;
-    /*padding: 1.5rem 1.2rem 1.5rem 1.3rem;*/
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
 }
 
 .category{
     flex: 1;
-}
-.name-movie-and-arrow-btn{
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    justify-content: space-between;
-    margin-right: 1rem;
-    margin-top: 1rem;
 }
 
 .count-box{
@@ -42,8 +34,6 @@
     align-items: center;
     border: 1px solid #A9A9A9;
     border-bottom: 1px dashed transparent;
-    /*border-bottom-right-radius: 25px;*/
-    /*border-bottom-left-radius: 25px;*/
 }
 .remind-box h5{
     margin: 0;
@@ -55,8 +45,6 @@
     gap: 1.5em;
     font-size: 24px;
     border-top: transparent;
-    /*border-top-right-radius: 25px;*/
-    /*border-top-left-radius: 25px;*/
     justify-content: center;
 }
 *, *::after, *::before{
@@ -147,40 +135,3 @@
     }
 }
 
-/*Direction button*/
-.arrow-btn{
-    display: inline-flex;
-}
-.direction-btn{
-    padding: .75rem 1.15rem;
-    background-color: var(--background-feature-color);
-    border: none;
-    cursor: pointer;
-}
-.direction-btn.right{
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-.direction-btn.left{
-    border-right: 1px solid #d3d3d3;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-}
-
-/*Image processing */
-
-.movie-image-feature{
-    position: absolute;
-    /*width: 54rem;*/
-    width: 864px;
-    height: 260px;
-
-}
-.movie-image-feature img{
-    border-radius: 15px;
-    width: 100%;
-    /*aspect-ratio: 34/30;*/
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 12%;
-}

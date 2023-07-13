@@ -1,0 +1,30 @@
+.top-movie-detail{
+    display: flex;
+}
+.top-movie-information{
+    padding: 1rem 0 1rem 1rem;
+}
+.top-movie-information .detail{
+    display: flex;
+}
+.top-movie-image{
+    height: 22rem;
+}
+.top-movie-image img{
+    height: 100%;
+}
+.top-movie-information h4{
+    margin: 0
+}
+.top-movie-information .top-movie-information-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: .3rem;
+    gap: .3rem;
+}
+.top-movie-review, .top-movie-review svg{
+    color: #eff543;
+}
+.movie-title h2{
+    font-size: 2rem;
+}

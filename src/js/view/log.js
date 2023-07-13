@@ -10,7 +10,6 @@ const panelLeft = document.querySelector('.panel-left')
 const panelRight = document.querySelector('.panel-right')
 const signInDetail = document.querySelector('.sign-in-detail')
 const signUpDetail = document.querySelector('.sign-up-detail')
-body.classList.add('log-form-active')
 let currentSignIn = true;
 
 const displaySwitchLogForms = () =>{

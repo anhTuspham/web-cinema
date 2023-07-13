@@ -5,14 +5,8 @@ dotenv.config();
 const apikey = process.env.OMDB_API_KEY;
 
 const displayRemindBox = async function(){
-    const data = await fetch(`${API_URL}?apikey=${apikey}&i=tt13045890`)
-        .then(res => res.json());
-    // console.log(data)
     reminder.innerHTML =
-        `<div class="movie-image-feature">
-            <img src=${data.Poster} alt="Poster film">
-        </div>
-        <div class="count-box">
+       ` <div class="count-box">
             <div class="upper-count-box">
                 <h4>Do you want to be reminded?</h4>
                 <div class="remind-box">
@@ -78,11 +72,6 @@ const displayRemindBox = async function(){
                         <div class="timer-title">Minutes</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="name-movie-and-arrow-btn">
-            <div class="name-movie">
-                <p>${data.Title}</p>
             </div>
         </div>`
 }
