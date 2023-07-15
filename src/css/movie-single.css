@@ -24,8 +24,9 @@
         --grid-col: 2;
     }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 460px) {
     .movie-list.flex-grid{
         --grid-col: 1;
+        max-width: 55%;
     }
 }

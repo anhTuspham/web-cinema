@@ -28,7 +28,7 @@ body{
 .container{
     background: white;
     margin: 100px 200px;
-    padding: 25px 30px 25px 40px;
+    padding: 25px 30px;
     border-radius: 30px;
     background: var(--main-color);
 }
@@ -103,8 +103,22 @@ input{
         margin: 30px 60px;
     }
 }
+@media screen and (min-width: 1025px) {
+    .mobile-btn{
+        display: none;
+    }
+}
 @media screen and (max-width: 1024px) {
     .container{
         margin: 5px 10px;
+    }
+    .desktop-btn{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 620px) {
+    .container{
+        padding: 20px 10px;
     }
 }

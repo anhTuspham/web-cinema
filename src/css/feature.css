@@ -20,7 +20,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1rem;
 }
 .upper-count-box, .lower-count-box{
     padding: 15px;
@@ -135,3 +134,9 @@
     }
 }
 
+@media screen and (max-width: 650px) {
+    .feature{
+        display: flex;
+        flex-direction: column;
+    }
+}

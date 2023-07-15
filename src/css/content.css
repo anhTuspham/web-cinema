@@ -33,15 +33,20 @@
     }
 }
 
-/*@media screen and (max-width: 1600px){*/
-/*    .right-column-container{*/
-/*        padding: 5px;*/
-/*    }*/
-/*}*/
-
 @media only screen and (max-width: 1024px) {
-    .left-column-container{
+    .left-column-container {
         display: none;
+    }
+    .container.menu-mobile .left-column-container{
+        display: block;
+        z-index: 99;
+        background: var(--main-color);
+    }
+    .container.menu-mobile .right-column-container{
+        filter: blur(10px);
+        opacity: 0.5;
+        user-select: none;
+        pointer-events: none;
     }
     .right-column-container{
         padding: 5px 10px;

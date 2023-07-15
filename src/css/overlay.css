@@ -7,6 +7,7 @@ body.overlay-active .overlay{
 body.overlay-active .container{
     filter: blur(10px);
     pointer-events: none;
+    user-select: none;
 }
 
 .overlay {
@@ -21,7 +22,6 @@ body.overlay-active .container{
 }
 
 .movie-detail-container{
-    /*display: none;*/
     min-width: 60rem;
     min-height: 39rem;
     border-radius: 12px;

@@ -134,9 +134,36 @@ a img{
     background: transparent;
     border-right: solid 1px #000000;
 }
+@media screen and (min-width: 1025px) {
+    .header-btn.mobile-btn{
+        display: none;
+    }
+}
 
-/*@media screen and (max-width: 768px) {*/
-/*    .search-container{*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 1024px) {
+    .header .search-container{
+        display: none;
+    }
+    .header.search-mobile .search-container{
+        display: block;
+        width: 100%;
+    }
+    .header.search-mobile .logo-part,
+    .header.search-mobile .header-btn-container{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .header{
+        padding: 0;
+        display: block;
+        margin-bottom: .5rem;
+    }
+    .header-part{
+        justify-content: center;
+    }
+    .header.search-mobile .logo-part{
+        display: flex;
+    }
+}

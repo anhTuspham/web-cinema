@@ -28,3 +28,17 @@
 .movie-title h2{
     font-size: 2rem;
 }
+
+@media screen and (max-width: 650px) {
+    .top-movie-detail{
+        display: block;
+    }
+    .top-movie-image{
+        display: flex;
+        justify-content: center;
+        height: 18rem;
+    }
+    .top-movie-information{
+        padding: .5rem .3rem;
+    }
+}
