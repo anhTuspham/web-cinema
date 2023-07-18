@@ -41,7 +41,7 @@ export const searchMovieData = function (){
     movieSearchBox.addEventListener('keyup',function (){
         let searchItem = (movieSearchBox.value).trim();
         if (searchItem.length > 0){
-            console.log(searchItem)
+            // console.log(searchItem)
             renderSpinner(movieSearchList)
             movieSearchList.classList.remove('hidden');
             loadMovieData(searchItem);

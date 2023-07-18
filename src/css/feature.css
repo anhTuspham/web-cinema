@@ -133,10 +133,14 @@
         transform: rotateX(90deg);
     }
 }
-
 @media screen and (max-width: 650px) {
     .feature{
         display: flex;
         flex-direction: column;
+    }
+}
+@media screen and (max-width: 460px) {
+    .upper-count-box{
+        display: block;
     }
 }

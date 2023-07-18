@@ -8,7 +8,7 @@ const topMovieDetail = document.querySelector('.top-movie-detail')
 const displayTopSearchMovie = async () =>{
     const movie = await fetch(`${API_URL}?apikey=${apikey}&i=tt10366206`)
         .then(res => res.json());
-    console.log(movie)
+    // console.log(movie)
 
     topMovieDetail.innerHTML =
         `<div class="top-movie-image">

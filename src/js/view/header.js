@@ -4,8 +4,10 @@ const searchContainer = document.querySelector('.search-container');
 const logo = document.querySelector('.logo-part');
 const searchMobile = document.getElementById('search-mobile')
 const searchBtnGlass = document.querySelector('.search-btn.glass');
-const header = document.querySelector('.header')
 const menuMobile = document.getElementById('menu-mobile')
+const header = document.querySelector('.header')
+document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px')
+
 
 
 searchMobile.addEventListener('click', () =>{
