@@ -20,14 +20,17 @@ searchBtnGlass.addEventListener('click',() =>{
 })
 menuMobile.addEventListener('click',() =>{
     container.classList.toggle('menu-mobile')
+    container.classList.add('on')
 })
 
 window.addEventListener('resize', ()=>{
     if(window.screen.width <= 1024){
+        container.classList.remove('menu-mobile')
         searchContainer.style.width = '100%';
         searchListContainer.style.width = `${searchContainer.offsetWidth}px`;
     }
     else {
+        container.classList.remove('on')
         searchContainer.style.width = '50%';
         searchListContainer.style.width = `${searchContainer.offsetWidth}px`;
     }
