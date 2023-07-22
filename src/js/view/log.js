@@ -11,43 +11,55 @@ const panelRight = document.querySelector('.panel-right')
 const signInDetail = document.querySelector('.sign-in-detail')
 const signUpDetail = document.querySelector('.sign-up-detail')
 let currentSignIn = true;
+// body.classList.add('log-form-active')
+const overlayLogDetail = document.querySelector('.overlay-log-detail-container')
 
-const displaySwitchLogForms = () =>{
+const switchLogForms = () =>{
     if(currentSignIn) {
         signInDetail.style.display = 'flex';
         signUpDetail.style.display = 'none';
         panelRight.style.display = 'flex';
-        panelLeft.style.display = 'none'
+        panelLeft.style.display = 'none';
+        let percentPanelValue = (((logContainer.offsetWidth / overlayLogDetail.offsetWidth) - 1 ) * 100).toFixed(2)
+        let percentLogValue = (((logContainer.offsetWidth / signInDetail.offsetWidth) - 1) * 100).toFixed(2)
+        document.documentElement.style.setProperty('--percent-panel',`-${percentPanelValue}` + '%')
+        document.documentElement.style.setProperty('--percent-log', `${percentLogValue}` + '%')
     }
     else{
         signInDetail.style.display = 'none';
         signUpDetail.style.display = 'flex';
         panelRight.style.display = 'none';
-        panelLeft.style.display = 'flex'
+        panelLeft.style.display = 'flex';
+        let percentPanelValue = (((logContainer.offsetWidth / overlayLogDetail.offsetWidth) - 1 ) * 100).toFixed(2)
+        let percentLogValue = (((logContainer.offsetWidth / signUpDetail.offsetWidth) - 1) * 100).toFixed(2)
+        document.documentElement.style.setProperty('--percent-panel',`-${percentPanelValue}` + '%')
+        document.documentElement.style.setProperty('--percent-log', `${percentLogValue}` + '%')
     }
 }
+const style = getComputedStyle(document.documentElement);
+const percentLog = style.getPropertyValue('--percent-log').trim();
+console.log('Percent log' + percentLog);
 
-const switchLogForm = () =>{
+const enableLogSwitching = () =>{
     const logSwitchBtns = document.querySelectorAll('.log-switch-btn');
     logSwitchBtns.forEach((logSwitchBtn) =>{
         logSwitchBtn.addEventListener('click', () =>{
             logContainer.classList.toggle('active-sign-up')
             logContainer.classList.add('active-scroll')
             currentSignIn = !currentSignIn;
-            displaySwitchLogForms()
+            switchLogForms()
         })
     })
 }
 
 export const displayLogForm = () => {
-    displaySwitchLogForms()
-    switchLogForm()
+    switchLogForms()
+    enableLogSwitching()
     showPassword(showPasswordCheckBoxSignUp,myPasswordSignUp);
     showPassword(showPasswordCheckBoxSignIn,myPasswordSignIn)
 }
 
 const showPassword = function (showPasswordCheckbox,myPassword){
-    showPasswordCheckbox.checked = !showPasswordCheckbox.checked
     showPasswordCheckbox.checked = false;
     const showPasswordClasses = document.querySelectorAll('.show-password');
     showPasswordClasses.forEach((showPasswordClass) =>{
@@ -76,5 +88,12 @@ export const toggleLoginForm = () =>{
         logContainer.classList.remove('active-scroll')
     })
 }
+window.addEventListener('resize',() =>{
+    body.classList.remove('log-form-active')
+    logContainer.classList.remove('active-sign-up')
+    logContainer.classList.remove('active-scroll')
+    currentSignIn = true;
+    switchLogForms()
+})
 
 

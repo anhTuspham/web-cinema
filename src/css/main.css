@@ -17,6 +17,7 @@
     --main-color: #21212d;
     --menu-color: rgb(15, 25, 87);
     --size-spinner: 30px;
+    /*--percent-log: calc(((var(--log-form-width) - var(--sign-in-width)) / var(--sign-in-width)) * 100%);*/
 }
 body{
     font-family: 'Sora', sans-serif;
