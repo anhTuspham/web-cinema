@@ -40,10 +40,10 @@ body.overlay-active .container{
     border-radius: 12px;
 }
 .left-content{
-    flex-basis: 40%;
+    flex: 1 40%;
 }
 .right-content{
-    flex-basis: 60%;
+    flex: 2 60%;
 }
 
 .movie-image img{
@@ -86,4 +86,11 @@ body.overlay-active .container{
 }
 .close-detail-btn .w-6 {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .movie-detail-container{
+        min-width: 80%;
+        min-height: auto;
+    }
 }
