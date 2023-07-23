@@ -88,12 +88,12 @@ export const toggleLoginForm = () =>{
         logContainer.classList.remove('active-scroll')
     })
 }
-window.addEventListener('resize',() =>{
-    body.classList.remove('log-form-active')
-    logContainer.classList.remove('active-sign-up')
-    logContainer.classList.remove('active-scroll')
-    currentSignIn = true;
-    switchLogForms()
-})
+// window.addEventListener('resize',() =>{
+//     body.classList.remove('log-form-active')
+//     logContainer.classList.remove('active-sign-up')
+//     logContainer.classList.remove('active-scroll')
+//     currentSignIn = true;
+//     switchLogForms()
+// })
 
 

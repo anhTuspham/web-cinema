@@ -288,6 +288,12 @@ body.log-form-active .log-container{
         display: block;
         min-width: 70%;
     }
+    .sign-in-detail, .sign-up-detail{
+        border-radius: 15px 15px 0 0;
+    }
+    .panel-left, .panel-right{
+        border-radius: 0 0 15px 15px;
+    }
 }
 @media screen and (max-width: 500px) {
     body.log-form-active .log-container{

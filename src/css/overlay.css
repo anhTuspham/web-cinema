@@ -94,3 +94,35 @@ body.overlay-active .container{
         min-height: auto;
     }
 }
+@media screen and (max-width: 768px) {
+    .movie-detail-container{
+        width: 100%;
+        height: 100%;
+    }
+    .movie-image, .movie-image img{
+        height: 100%;
+    }
+    .movie-detail{
+        height: 100%;
+    }
+    .left-content, .right-content{
+        flex: 50%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .movie-detail{
+        display: block;
+    }
+    .movie-image, .movie-image img{
+        height: auto;
+    }
+    .right-content .movie-information{
+        padding: 1rem
+    }
+    .movie-image img{
+        aspect-ratio: 13 / 15;
+    }
+    .movie-detail{
+        overflow: scroll;
+    }
+}
